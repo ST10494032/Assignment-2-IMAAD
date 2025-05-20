@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/celebrate_app_logo"
+    tools:context=".Scores">
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="296dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="595dp"
+        android:text="You answerd 3 out of the 5 Correctly"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="193dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="366dp"
+        android:text="Well Done!!!"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreText" />
+
+    <Button
+        android:id="@+id/reviewButton"
+        android:layout_width="257dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="225dp"
+        android:text="Review Answers"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="264dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="125dp"
+        android:text="Exit"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
