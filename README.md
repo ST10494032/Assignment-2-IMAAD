@@ -20,7 +20,7 @@ That is te=he entire app and its
 - Guides for use of app
 ## Demo
 
-https://youtu.be/tpHtWJag0RE 
+youTube video link: https://youtu.be/tpHtWJag0RE 
 
 ## FAQ
 
