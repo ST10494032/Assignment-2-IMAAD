@@ -40,4 +40,9 @@ uninstall and reinstall. it an be a developer problem.
 
 ![screenshot one](https://github.com/user-attachments/assets/36ed684f-7df6-42fa-ab91-6b39e7628540)
 
+![screenshot 2](https://github.com/user-attachments/assets/171fff06-8349-4566-aee1-4e3fc5348a0e)
+
+![screenshot 3](https://github.com/user-attachments/assets/e48e7d0f-8557-44c4-ba96-fd014cf7334d)
+
+![screenshot 4](https://github.com/user-attachments/assets/445b18d0-83b9-4fd1-a576-914e08b00fb2)
 
