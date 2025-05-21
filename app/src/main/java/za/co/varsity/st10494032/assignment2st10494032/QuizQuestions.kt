@@ -6,23 +6,28 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.collection.emptyLongSet
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class QuizQuestions : AppCompatActivity() {
 
     // List of flashcard questions and their correct answers
-    private  val  questions = listOf(
-        Pair ("The Great Wall of China was built during the Ming Dynasty.", true),
+    private val questions = listOf(
+        Pair("The Great Wall of China was built during the Ming Dynasty.", true),
         Pair("The Declaration of Independence was signed in 1776.", true),
         Pair("Napoleon was defeated at the Battle of Hastings.", false),
         Pair("World War I ended in 1920.", false),
         Pair("The Roman Empire fell in 476 AD.", true)
     )
-    private  var currentQuestionIndex = 0
+    private var currentQuestionIndex = 0
     private var score = 0
     private var answered = false
+
+    private lateinit var questionText: TextView
+    private lateinit var trueButton: Button
+    private lateinit var falseButton: Button
+    private lateinit var feedbackText: TextView
+    private lateinit var nextButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,22 +62,29 @@ class QuizQuestions : AppCompatActivity() {
 
         // Handle True button click
         trueButton.setOnClickListener {
-            checkAnswer(true, feedbackText)
+            if (!answered) {
+                checkAnswer(true, feedbackText)
+                answered = true
+                disableAnswerButtons()
+
+            }
         }
 
         // Handle False button click
         falseButton.setOnClickListener {
-            checkAnswer(false, feedbackText)
+            if (!answered) {
+                checkAnswer(false, feedbackText)
+                answered = true
+                disableAnswerButtons()
+            }
         }
-
         // Handle Next button click
         nextButton.setOnClickListener {
-
-            currentQuestionIndex++
-            if (currentQuestionIndex < questions.size) {
+            if (currentQuestionIndex < questions.size - 1) {
+                currentQuestionIndex++
+                enableAnswersButton()
                 loadQuestion()
-            } else {
-
+            }else if (answered) {
                 // All questions done, move to score screen
                 val intent = Intent(this, Scores::class.java)
                 intent.putExtra("score", score)

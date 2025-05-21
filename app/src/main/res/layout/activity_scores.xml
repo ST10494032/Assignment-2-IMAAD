@@ -25,9 +25,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="193dp"
-        android:layout_height="50dp"
+        android:id="@+id/resultText"
+        android:layout_width="302dp"
+        android:layout_height="111dp"
         android:layout_marginStart="198dp"
         android:layout_marginTop="164dp"
         android:layout_marginEnd="155dp"
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
 
     <Button
         android:id="@+id/exitButton"

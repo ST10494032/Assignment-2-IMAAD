@@ -1,5 +1,6 @@
 package za.co.varsity.st10494032.assignment2st10494032
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Scores : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,7 +20,7 @@ class Scores : AppCompatActivity() {
         // Retrieve the score from the intent
         val score = intent.getIntExtra("score", 0)
         val scoreText = findViewById<TextView>(R.id.scoreText)
-        val feedbackText = findViewById<TextView>(R.id.feedbackText)
+        val resultText = findViewById<TextView>(R.id.resultText)
         val reviewButton = findViewById<Button>(R.id.reviewButton)
         val exitButton = findViewById<Button>(R.id.exitButton)
 
@@ -26,10 +28,10 @@ class Scores : AppCompatActivity() {
         scoreText.text = "You got $score out of 5 correct"
 
         // Give personalized feedback based on the score
-        feedbackText.text = when (score) {
+        resultText.text = when (score) {
             5 -> "Excellent work!"
-            in 3..4, -> "Good job! Keep trying"
-            else -> "Dont worry, try again"
+            in 3..4 -> "Good job! Keep trying"
+            else -> "Don't worry, try again"
         }
 
         // Set up button to review answers
